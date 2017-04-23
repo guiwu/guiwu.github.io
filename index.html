@@ -260,6 +260,164 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guiwu.me/2017/04/11/2017-04-10-区块链（二）双花问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="guiwu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guiwu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/11/2017-04-10-区块链（二）双花问题/" itemprop="url">
+                  区块链（二）双花问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T00:00:00+08:00">
+                2017-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/11/2017-04-10-区块链（二）双花问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/11/2017-04-10-区块链（二）双花问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h4 id="双花问题"><a href="#双花问题" class="headerlink" title="双花问题"></a>双花问题</h4><hr>
+<h4 id="什么是双花"><a href="#什么是双花" class="headerlink" title="什么是双花"></a>什么是双花</h4><hr>
+<p>　　前面我们讲到区块链就是一种去中心的可靠的协议，一种点对点的价值传输，相比于数据传输协议解决了很核心的重复支付的问题，重复支付也就是我们经常听到的双花，关于双花我认为从两种维度来理解，举个例子：小明拿编号为123456789的一百块钱去商店买杜蕾斯，同时拿着这一百块钱买了口香糖，假设杜蕾斯跟口香糖的价钱都是100块钱，小明都买成功了，这是一种双花；第二种情况：小明拿着编号为123456789的一百块钱买了杜蕾斯，同时他复印了一份同样的编号的假的一百块钱买了口香糖，也买成功了，这算是一种双花。广义上来看这两种情况都属于重复支付，一种从交易的维度，一种从货币本身的维度。</p>
+<h4 id="现在是怎么解决"><a href="#现在是怎么解决" class="headerlink" title="现在是怎么解决"></a>现在是怎么解决</h4><hr>
+<p>　　正如前面所说现在所有的价值传输都是依赖于第三方机构来实现，我们以银行为例，其他第三方机构也基本一样。防止双花从交易和货币本身来控制，首先从交易上，例如我们都是以刷卡交易，卡上的资产都是在银行作为第三方参与者手中，明确将消费的100块钱从小明的卡中转移到了商户的卡中；假设小明很聪明知道银行处理可能需要一点时间，几乎同时从卡上两处地方消费了100块钱，银行也几乎同时收到了两笔消费，银行可没那么傻了，银行会按顺序一笔一笔处理，第一笔处理完之后，小明已经没钱了，第二笔自然就失败。第二点从货币本身小明依然去刷卡买杜蕾斯，买完后小明自作聪明想制作一张同样的卡，然而卡中磁道，芯片的信息根本难以复制。利用信息安全加密等技术杜绝了非法货币的产生。区块链解决双花的思路基本上也是差不多的，从货币价值的不可篡改复制，到交易的难以重复确认，然而用到的技术手段却完全不一样。</p>
+<h4 id="区块链怎么解决"><a href="#区块链怎么解决" class="headerlink" title="区块链怎么解决"></a>区块链怎么解决</h4><hr>
+<p>　　还是从两个维度来看，货币本身和交易的维度来解决双花的问题。货币本身，我们知道在区块链上账户就是一个二维码的哈希地址，从比特币白皮书上来看区块链上的数字货币本身是不加密，加密的是账户，每个账户都具有成对的公私钥，每个账户进行货币转移时都需要用自己的私钥对交易进行数字签名，全网通过公钥对交易进行所有权验证，区块链从密码学的角度解决了货币本身所有权的问题；从交易上，区块链引入工作量证明，也叫共识机制常见的有pow，pos，也是区块链去中心化的核心思想，用奖励的方式让全网一起参与计算，共同计算的过程就叫做挖矿。假设小明又同时花了100块钱买杜蕾斯跟口香糖，两笔交易会同时向全网广播，所有的区块链节点会收到广播的请求，同时每个节点上会存在全网所有的区块信息也就是全网的账户信息，来验证小明该交易的合法性。两笔交易一前一后到达那肯定没啥好说的，全网任意一个节点都能验证出第二笔为重复支付；若两笔交易同时达到两个节点中，两个节点同时验证为成功的同时广播到全网，若整个全网一部分阶段收到的是买杜蕾斯，一部分节点收到的是口香糖都对本地数据进行了更新，那全网就出现了分叉，好在区块链对交易的确认有两点：1. 存在与最长分支中的block，2. 至少有5个验证过的block再其后面得到验证。所以出现分叉之后，全网的矿工会继续按照自己的区块更新，再之后的几次区块中自然会更新出最长的一条区块来，全网的所有矿工都以最长的区块信息为准。如果小明想要保持两笔交易都被确认，那他需要对全网所有的节点进行对抗，保持在两个分叉链上同时更新，显然是没法做到的。</p>
+<h2 id=""><a href="#" class="headerlink" title="　　　　　　"></a>　　　　　　</h2><p>2017.4.4</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://guiwu.me/2017/04/04/2017-04-03-区块链（一）从点对点数据传输说起/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -414,6 +572,158 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guiwu.me/2017/04/03/2017-04-03-元认知/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="guiwu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guiwu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/03/2017-04-03-元认知/" itemprop="url">
+                  读元认知
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T00:00:00+08:00">
+                2017-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/03/2017-04-03-元认知/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/2017-04-03-元认知/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>　　看李笑来公账号推荐的这本书，买了本看了看。</p>
+<h2 id=""><a href="#" class="headerlink" title="　　"></a>　　</h2><p>2017.4.3<br>02:12</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://guiwu.me/2017/04/03/2017-04-03-要过怎样的生活/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -527,158 +837,6 @@
 <p>　　最近身边的人也都陆续开始买房，看了两周，大致就是买得起的看不上，看得上的买不起的状态。又随便看了看车，还是一样的状态。<br>　　一直以来都有一种心态，觉得自己就是应该拥有最好的东西，也希望自己都能值得拥有最好的东西，从衣食住行上，房车也一样；看完之后落差其实蛮大的，按照这个状态下去，可能一辈子就只能住在100平左右的房子里，开着20w左右的车，和老家的同学比起来好像都很不错了，一种饿不死的状态；心理多少会有很多不甘心，觉得自己就应该住几百平的大房子，开好车，这一刻只想记下来，要让自己的才华值得拥有这一切。<br>　　未来待续。</p>
 <hr>
 <p>2017.4.3<br>02:36</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://guiwu.me/2017/04/03/2017-04-03-元认知/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="guiwu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="guiwu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/03/2017-04-03-元认知/" itemprop="url">
-                  读元认知
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T00:00:00+08:00">
-                2017-04-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/03/2017-04-03-元认知/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/2017-04-03-元认知/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>　　看李笑来公账号推荐的这本书，买了本看了看。</p>
-<h2 id=""><a href="#" class="headerlink" title="　　"></a>　　</h2><p>2017.4.3<br>02:12</p>
 
           
         
@@ -1760,7 +1918,7 @@ say(&quot;hello world&quot;, user: &quot;xiaoming&quot;)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
